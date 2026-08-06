@@ -43,7 +43,39 @@ cartButtons.forEach((button)=>{
             JSON.stringify(cart)
 
         );
+// ======================================
+// USER ACCOUNT
+// ======================================
 
+
+let username = localStorage.getItem("username");
+
+
+let userNameText = document.getElementById(
+"user-name"
+);
+
+
+
+if(userNameText && username){
+
+    userNameText.innerText =
+    "👤 " + username;
+
+}
+
+
+
+function logout(){
+
+    localStorage.removeItem("login");
+
+    localStorage.removeItem("username");
+
+
+    window.location.href="welcome.html";
+
+}
 
 
         alert(
