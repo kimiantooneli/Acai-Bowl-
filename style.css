@@ -124,5 +124,8 @@ body{
 .login-box button:hover{
 
     background:#7c5bd6;
+   body{
+    background:pastel purple;
+   }
 
       }
