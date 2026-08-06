@@ -1,0 +1,59 @@
+// ======================================
+// SELLER PRODUCT DISPLAY
+// ======================================
+
+
+let products = JSON.parse(
+
+localStorage.getItem("products")
+
+) || [];
+
+
+
+const sellerProducts = document.getElementById(
+"seller-products"
+);
+
+
+
+if(sellerProducts){
+
+
+sellerProducts.innerHTML = "";
+
+
+if(products.length === 0){
+
+
+sellerProducts.innerHTML =
+"<p>Belum ada produk</p>";
+
+
+}else{
+
+
+products.forEach((product)=>{
+
+
+sellerProducts.innerHTML += `
+
+<div>
+
+<h3>${product.name}</h3>
+
+<p>${product.price}</p>
+
+</div>
+
+`;
+
+
+
+});
+
+
+}
+
+
+}
